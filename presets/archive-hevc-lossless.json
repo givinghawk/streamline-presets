@@ -1,0 +1,15 @@
+{
+  "id": "archive-hevc-lossless",
+  "name": "Archive HEVC Lossless",
+  "description": "Lossless archival preset using HEVC (H.265) codec for maximum quality preservation with efficient compression",
+  "category": "video",
+  "encoder": "libx265",
+  "ffmpegArgs": [
+    "-c:v", "libx265",
+    "-preset", "veryslow",
+    "-x265-params", "lossless=1",
+    "-c:a", "flac",
+    "-compression_level", "12",
+    "-tag:v", "hvc1"
+  ]
+}

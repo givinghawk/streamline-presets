@@ -1,0 +1,22 @@
+{
+  "id": "mobile-h264-lowbandwidth",
+  "name": "Mobile H.264 Low Bandwidth",
+  "description": "Mobile-optimized H.264 preset with reduced bitrate and resolution for low bandwidth scenarios and small file sizes",
+  "category": "video",
+  "encoder": "libx264",
+  "ffmpegArgs": [
+    "-c:v", "libx264",
+    "-preset", "medium",
+    "-crf", "28",
+    "-maxrate", "1M",
+    "-bufsize", "2M",
+    "-vf", "scale=854:480:flags=lanczos",
+    "-profile:v", "baseline",
+    "-level", "3.0",
+    "-c:a", "aac",
+    "-b:a", "64k",
+    "-ar", "44100",
+    "-movflags", "+faststart",
+    "-pix_fmt", "yuv420p"
+  ]
+}

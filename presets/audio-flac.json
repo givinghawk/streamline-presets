@@ -1,0 +1,13 @@
+{
+  "id": "audio-flac",
+  "name": "Audio FLAC",
+  "description": "Lossless audio compression using FLAC codec for archival and high-quality audio storage",
+  "category": "audio",
+  "encoder": "flac",
+  "ffmpegArgs": [
+    "-c:a", "flac",
+    "-compression_level", "12",
+    "-sample_fmt", "s16",
+    "-ar", "48000"
+  ]
+}

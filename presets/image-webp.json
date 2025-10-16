@@ -1,0 +1,14 @@
+{
+  "id": "image-webp",
+  "name": "Image WebP",
+  "description": "Modern image format with superior compression, ideal for web use with smaller file sizes than JPEG/PNG",
+  "category": "image",
+  "encoder": "libwebp",
+  "ffmpegArgs": [
+    "-c:v", "libwebp",
+    "-quality", "85",
+    "-compression_level", "6",
+    "-preset", "picture",
+    "-lossless", "0"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "web-vp9-optimized",
+  "name": "Web VP9 Optimized",
+  "description": "Optimized VP9 preset for web streaming with good quality-to-size ratio and wide browser compatibility",
+  "category": "video",
+  "encoder": "libvpx-vp9",
+  "ffmpegArgs": [
+    "-c:v", "libvpx-vp9",
+    "-crf", "30",
+    "-b:v", "0",
+    "-row-mt", "1",
+    "-threads", "8",
+    "-cpu-used", "2",
+    "-tile-columns", "2",
+    "-tile-rows", "1",
+    "-c:a", "libopus",
+    "-b:a", "128k",
+    "-vf", "scale=-2:720:flags=lanczos"
+  ]
+}
