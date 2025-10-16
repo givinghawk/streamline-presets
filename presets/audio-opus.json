@@ -1,0 +1,15 @@
+{
+  "id": "audio-opus",
+  "name": "Audio Opus",
+  "description": "Efficient audio compression using Opus codec, ideal for streaming and web applications with excellent quality at lower bitrates",
+  "category": "audio",
+  "encoder": "libopus",
+  "ffmpegArgs": [
+    "-c:a", "libopus",
+    "-b:a", "128k",
+    "-vbr", "on",
+    "-compression_level", "10",
+    "-application", "audio",
+    "-ar", "48000"
+  ]
+}

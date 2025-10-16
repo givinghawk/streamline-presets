@@ -1,0 +1,20 @@
+{
+  "id": "youtube-1080p-h264",
+  "name": "YouTube 1080p H.264",
+  "description": "Optimized preset for YouTube uploads at 1080p resolution using H.264 codec with recommended bitrate settings",
+  "category": "video",
+  "encoder": "libx264",
+  "ffmpegArgs": [
+    "-c:v", "libx264",
+    "-preset", "slow",
+    "-crf", "18",
+    "-maxrate", "8M",
+    "-bufsize", "16M",
+    "-vf", "scale=1920:1080:flags=lanczos",
+    "-c:a", "aac",
+    "-b:a", "192k",
+    "-ar", "48000",
+    "-movflags", "+faststart",
+    "-pix_fmt", "yuv420p"
+  ]
+}
